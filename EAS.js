@@ -22,7 +22,7 @@ for (i = 0; i < 16; i ++){
 
 //add mouse click listener
 let cont = document.querySelector(".container");
-cont.addEventListener("click", function(e) {
+cont.addEventListener("mouseover", function(e) {
     console.log(e.target);
     if ( e.target.className === "square"){
         e.target.style.backgroundColor = "black";
