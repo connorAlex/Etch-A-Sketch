@@ -30,6 +30,9 @@ button{
     padding: 10px;
     background-color: #FBF7F4;
 }
+.label{
+    text-align: center;
+}
 .slidecontainer{
     width: 100%;
 }

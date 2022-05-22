@@ -7,6 +7,7 @@ let range = document.querySelector(".slider");
 let label = document.querySelector(".label");
 label.innerHTML = range.value;
 let mydim = range.value;
+
 setDimensions(mydim);
 
 range.oninput  = function () {
@@ -24,29 +25,36 @@ range.oninput  = function () {
 //add mouse click listener
 let cont = document.querySelector(".container");
 cont.addEventListener("mouseover", function(e) {
-    
+    let rainbow = document.querySelector(".rainbow").checked;
     if ( e.target.className === "square"){
-        e.target.style.backgroundColor = "#6C9A8B";
+        if (rainbow === true){
+            
+            e.target.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        }
+        else{
+            e.target.style.backgroundColor = "#6C9A8B";
+        }
+        
     }
     
 });
 
 function setDimensions(dim){
-    
+ 
     //create rows
     for (i = 0; i < dim; i ++){
         const row = document.createElement("div");
         row.className = "row";
         container.appendChild(row);
 
-        //spacing must be relative to the dimensions
-
         //set up squares
         for (j = 0; j < dim; j ++){
             const square = document.createElement("div");
             square.className = "square";
+            square.style.padding = `${400 / dim}px`;       //spacing must be relative to the dimensions
+        
             row.appendChild(square);
-            square.style.padding = `${400 / dim}px`;
+            
         }   
     }
 }
