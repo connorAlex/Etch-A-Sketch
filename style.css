@@ -30,3 +30,18 @@ button{
     padding: 10px;
     background-color: #FBF7F4;
 }
+.slidecontainer{
+    width: 100%;
+}
+.slider{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    outline: none;
+    opacity: .8;
+    border-radius: 10px; 
+    background: black;
+}
+.slider::-webkit-slider-thumb{
+    background: yellow;
+}
