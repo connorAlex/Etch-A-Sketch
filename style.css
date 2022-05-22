@@ -1,4 +1,8 @@
-
+body{
+    background-color: #EED2CC;
+    display:flex;
+    flex-direction: column;
+}
 .container{
     display: flex;
     align-items: center;
@@ -6,8 +10,23 @@
     
 }
 .square{
+    background-color: #FBF7F4;
     border-width: 1px;
-    border-color: black;
     border-style: solid;
-    padding: 20px;
+    
+}
+button{
+    width: 150px;
+    height: 50px;
+    align-self: center;  
+}
+.header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.options{
+    border: solid;
+    padding: 10px;
+    background-color: #FBF7F4;
 }

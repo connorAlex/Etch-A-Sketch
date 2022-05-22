@@ -2,21 +2,23 @@
 
 const container = document.querySelector(".container");
 
+//set default dimensions
+let dim = 16;
+
 //create rows
-for (i = 0; i < 16; i ++){
+for (i = 0; i < dim; i ++){
     const row = document.createElement("div");
     row.className = "row";
-    
     container.appendChild(row);
 
+    //spacing must be relative to the dimensions
+
     //set up squares
-    for (j = 0; j < 16; j ++){
+    for (j = 0; j < dim; j ++){
         const square = document.createElement("div");
         square.className = "square";
-        square.setAttribute('data-x', i);
-        square.setAttribute('data-y',15 - j);
-       
         row.appendChild(square);
+        square.style.padding = `${200 / dim}px`;
     }   
 }
 
@@ -25,7 +27,7 @@ let cont = document.querySelector(".container");
 cont.addEventListener("mouseover", function(e) {
     console.log(e.target);
     if ( e.target.className === "square"){
-        e.target.style.backgroundColor = "black";
+        e.target.style.backgroundColor = "#6C9A8B";
     }
     
 });
