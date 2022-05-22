@@ -5,20 +5,25 @@
         <link rel = "stylesheet" href  = "style.css">
     </head>
     <body>
-        <div class = "header">
-            <h1>Etch-A-Sketch</h1>
-            <div class = "options">
-                <div class = "slidecontainer">
-                    <input type = "range" min = "1" max = "100" value = "16" class = "slider" id = "myRange">
-                    <div class = "label">16</div>
+        <div class = "content"> 
+            <div class = "header">
+                <h1>Etch-A-Sketch</h1>
+                <div class = "options">
+                    Grid Size
+                    <div class = "slidecontainer">
+                        <input type = "range" min = "1" max = "100" value = "16" class = "slider" id = "myRange">
+                        <div class = "label">16</div>
+                    </div>
+                    Rainbow Mode: <input type = "checkbox" class = "rainbow">
+                    <button class="reset" >Reset</button>
                 </div>
-                Rainbow Mode: <input type = "checkbox" class = "rainbow">
+            </div>
+            
+            <div class = "container">
+                <!---auto-divs go here-->
             </div>
         </div>
         
-        <div class = "container">
-            <!---auto-divs go here-->
-        </div>
 
     </body>
     <script src = "EAS.js" defer></script>

@@ -5,6 +5,7 @@ const container = document.querySelector(".container");
 //get slider value
 let range = document.querySelector(".slider");
 let label = document.querySelector(".label");
+//set label to slider value; default is 16.
 label.innerHTML = range.value;
 let mydim = range.value;
 
@@ -20,25 +21,22 @@ range.oninput  = function () {
 }
 
 
-
+//add reset click listener
+let btn = document.querySelector(".reset");
+btn.addEventListener("click", function(e) {
+    let rows = container.childNodes;
+    rows.forEach(function (e){
+        e.childNodes.forEach(function(s){
+            s.style.backgroundColor = "#FBF7F4";
+        });
+    });
+    console.log("asdf");
+});
 
 //add mouse click listener
 let cont = document.querySelector(".container");
-cont.addEventListener("mouseover", function(e) {
-    let rainbow = document.querySelector(".rainbow").checked;
-    if ( e.target.className === "square"){
-        if (rainbow === true){
-            
-            e.target.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-        }
-        else{
-            e.target.style.backgroundColor = "#6C9A8B";
-        }
-        
-    }
-    
-});
-
+cont.addEventListener("mouseover", draw);
+cont.addEventListener("touchstart");
 function setDimensions(dim){
  
     //create rows
@@ -56,5 +54,19 @@ function setDimensions(dim){
             row.appendChild(square);
             
         }   
+    }
+}
+
+function draw(e){
+    let rainbow = document.querySelector(".rainbow").checked;
+    if ( e.target.className === "square"){
+        if (rainbow === true){
+            
+            e.target.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+        }
+        else{
+            e.target.style.backgroundColor = "#6C9A8B";
+        }
+        
     }
 }

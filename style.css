@@ -2,7 +2,11 @@ body{
     background-color: #EED2CC;
     display:flex;
     flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    justify-content: center;
 }
+
 .container{
     display: flex;
     align-items: center;
@@ -16,19 +20,25 @@ body{
     
 }
 button{
-    width: 150px;
-    height: 50px;
+    width: 70px;
+    height: auto;
     align-self: center;  
+    margin: 5px;
 }
 .header{
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    gap: 50px;
+    margin-bottom: 20px;
 }
 .options{
     border: solid;
     padding: 10px;
     background-color: #FBF7F4;
+    width: 300px;
+    margin: 10px;
+    text-align: center;
 }
 .label{
     text-align: center;
@@ -38,13 +48,17 @@ button{
 }
 .slider{
     -webkit-appearance: none;
-    width: 100%;
+    width: 90%;
     height: 5px;
     outline: none;
-    opacity: .8;
-    border-radius: 10px; 
+    opacity: .7;
     background: black;
 }
 .slider::-webkit-slider-thumb{
-    background: yellow;
+    -webkit-appearance: none;
+    background: #6C9A8B;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    cursor: pointer;
 }
