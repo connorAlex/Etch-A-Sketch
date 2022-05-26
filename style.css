@@ -2,7 +2,7 @@ body{
     background-color: #EED2CC;
     display:flex;
     flex-direction: column;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Helvetica;
     align-items: center;
     justify-content: center;
 }
